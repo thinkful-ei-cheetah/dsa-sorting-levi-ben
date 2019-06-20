@@ -4,6 +4,8 @@ const quick = require('./quick');
 const merge = require('./merge');
 const LinkedList = require('./LinkedList');
 const mergeSort = require('./mergeSLL');
+const bucket = require('./bucket')
+const randomize = require('./random')
 
 const SLL = new LinkedList();
 SLL.insertFirst(89);
@@ -18,9 +20,11 @@ function main() {
     let data = dataStr.split(' ').map(str => Number(str));
 
     // console.log(quick(data));
-    
-    mergeSort(SLL);
-    SLL.display();
+    // console.log(bucket(data, 1, 98))    
+    console.log(randomize(data))
+
+    // mergeSort(SLL);
+    // SLL.display();
 }
 
 main();
